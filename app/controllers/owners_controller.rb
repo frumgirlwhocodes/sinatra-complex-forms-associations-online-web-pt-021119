@@ -19,7 +19,7 @@ post '/owners' do
 end
 
   get '/owners/:id/edit' do 
-    @pets
+    @pets=Pet.all
     @owner = Owner.find(params[:id])
     erb :'/owners/edit'
   end
